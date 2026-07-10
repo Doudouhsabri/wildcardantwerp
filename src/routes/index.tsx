@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Instagram, MapPin, Menu, X, ArrowRight } from "lucide-react";
+import { Instagram, MapPin, Menu, X, ArrowRight, Phone } from "lucide-react";
 
 import heroImg from "@/assets/hero-boxer.jpg";
 import techniqueImg from "@/assets/technique.jpg";
