@@ -573,15 +573,15 @@ function LocationSection() {
               <ul className="space-y-2 font-medium">
                 <li className="flex justify-between border-b border-border/60 pb-2">
                   <span className="uppercase tracking-wider text-sm">Di</span>
-                  <span className="text-display">19:30</span>
+                  <span className="text-display">19:30–20:30</span>
                 </li>
                 <li className="flex justify-between border-b border-border/60 pb-2">
                   <span className="uppercase tracking-wider text-sm">Do</span>
-                  <span className="text-display">19:30</span>
+                  <span className="text-display">19:30–20:30</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="uppercase tracking-wider text-sm">Za</span>
-                  <span className="text-display">16:00 – 17:00</span>
+                  <span className="text-display">16:00–17:00</span>
                 </li>
               </ul>
             </div>
