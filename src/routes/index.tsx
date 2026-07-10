@@ -360,9 +360,9 @@ function MotivationalBreak() {
 }
 
 const SCHEDULE = [
-  { day: "Dinsdag", time: "19:30" },
-  { day: "Donderdag", time: "19:30" },
-  { day: "Zaterdag", time: "16:00 – 17:00" },
+  { day: "Dinsdag", time: "19:30–20:30" },
+  { day: "Donderdag", time: "19:30–20:30" },
+  { day: "Zaterdag", time: "16:00–17:00" },
 ];
 
 function ScheduleSection() {
