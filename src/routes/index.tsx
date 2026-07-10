@@ -717,6 +717,12 @@ function Footer() {
               Kapelstraat 113-115<br />
               Hoboken, Antwerpen
             </address>
+            <a
+              href="tel:+32483273472"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors"
+            >
+              <Phone className="h-4 w-4" /> 0483 27 34 72
+            </a>
           </div>
 
           <div>
