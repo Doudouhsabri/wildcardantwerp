@@ -413,6 +413,43 @@ function ScheduleSection() {
           ))}
         </div>
 
+        <div className="mt-20 md:mt-28">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <h3 className="text-display text-4xl md:text-6xl">
+              Kids Boxing
+              <br />
+              <span className="text-primary">Training</span>
+            </h3>
+            <p className="max-w-md text-foreground/75">
+              Groep 7–14 jaar. Leren boksen, bewegen en discipline opbouwen in een veilige, energieke sfeer.
+            </p>
+          </div>
+
+          <div className="mt-10 border-t border-border">
+            {KIDS_SCHEDULE.map((s) => (
+              <div
+                key={s.day}
+                className="group flex items-center justify-between border-b border-border py-8 md:py-10 transition-colors hover:bg-surface/50 px-2 md:px-4"
+              >
+                <div className="flex items-center gap-6 md:gap-10">
+                  <span className="hidden md:block text-[10px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+                    Round
+                  </span>
+                  <span className="text-display text-4xl md:text-6xl uppercase transition-colors group-hover:text-primary">
+                    {s.day}
+                  </span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="hidden md:block h-px w-16 bg-border transition-all group-hover:w-32 group-hover:bg-primary" />
+                  <span className="text-display text-3xl md:text-5xl text-foreground/90 group-hover:text-primary transition-colors">
+                    {s.time}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <p className="text-foreground/70 max-w-md">
             Vragen over een training? Neem contact op met Wildcard Antwerp.
