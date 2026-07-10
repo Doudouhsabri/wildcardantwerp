@@ -697,8 +697,8 @@ function Index() {
         <MotivationalBreak />
         <ScheduleSection />
         <TeamSection />
-        <CTASection />
         <LocationSection />
+        <CTASection />
       </main>
       <Footer />
     </div>
