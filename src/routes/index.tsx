@@ -710,7 +710,7 @@ function Footer() {
               Boxing<br />Strength &amp; Conditioning
             </p>
             <address className="not-italic mt-6 text-sm text-foreground/70 leading-relaxed">
-              Kapelstraat 113<br />
+              Kapelstraat 113-115<br />
               Hoboken, Antwerpen
             </address>
           </div>
