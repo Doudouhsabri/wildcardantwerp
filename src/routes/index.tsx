@@ -601,7 +601,7 @@ function LocationSection() {
               </div>
               <div className="text-display text-xl leading-tight">
                 Wildcard Antwerp<br />
-                Kapelstraat 113<br />
+                Kapelstraat 113-115<br />
                 Hoboken, Antwerpen
               </div>
             </div>
@@ -631,17 +631,43 @@ function LocationSection() {
             <div className="h-px bg-border" />
 
             <div>
+              <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary mb-4">
+                Kids Boxing (7–14 jaar)
+              </div>
+              <ul className="space-y-2 font-medium">
+                <li className="flex justify-between border-b border-border/60 pb-2">
+                  <span className="uppercase tracking-wider text-sm">Wo</span>
+                  <span className="text-display">17:00–18:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="uppercase tracking-wider text-sm">Za</span>
+                  <span className="text-display">12:00–13:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="h-px bg-border" />
+
+            <div>
               <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
                 Contact
               </div>
-              <a
-                href={IG_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-              >
-                <Instagram className="h-4 w-4" /> @wildcardantwerp
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="tel:+32483273472"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                >
+                  <Phone className="h-4 w-4" /> 0483 27 34 72
+                </a>
+                <a
+                  href={IG_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                >
+                  <Instagram className="h-4 w-4" /> @wildcardantwerp
+                </a>
+              </div>
             </div>
 
             <a
