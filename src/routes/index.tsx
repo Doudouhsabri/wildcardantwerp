@@ -26,8 +26,8 @@ const NAV = [
 ];
 
 const IG_URL = "https://www.instagram.com/wildcardantwerp/";
-const MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=Kapelstraat+113+Hoboken+Antwerpen";
-const MAPS_EMBED = "https://www.google.com/maps?q=Kapelstraat+113,+Hoboken,+Antwerpen&output=embed";
+const MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=Kapelstraat+113-115+Hoboken+Antwerpen";
+const MAPS_EMBED = "https://www.google.com/maps?q=Kapelstraat+113-115,+Hoboken,+Antwerpen&output=embed";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
