@@ -365,6 +365,11 @@ const SCHEDULE = [
   { day: "Zaterdag", time: "16:00–17:00" },
 ];
 
+const KIDS_SCHEDULE = [
+  { day: "Woensdag", time: "17:00–18:00" },
+  { day: "Zaterdag", time: "12:00–13:00" },
+];
+
 function ScheduleSection() {
   return (
     <section id="uurrooster" className="relative bg-background py-24 md:py-32 grain">
