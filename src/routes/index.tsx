@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Instagram, MapPin, Menu, X, ArrowRight } from "lucide-react";
+import { Instagram, MapPin, Menu, X, ArrowRight, Phone } from "lucide-react";
 
 import heroImg from "@/assets/hero-boxer.jpg";
 import techniqueImg from "@/assets/technique.jpg";
@@ -26,8 +26,8 @@ const NAV = [
 ];
 
 const IG_URL = "https://www.instagram.com/wildcardantwerp/";
-const MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=Kapelstraat+113+Hoboken+Antwerpen";
-const MAPS_EMBED = "https://www.google.com/maps?q=Kapelstraat+113,+Hoboken,+Antwerpen&output=embed";
+const MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=Kapelstraat+113-115+Hoboken+Antwerpen";
+const MAPS_EMBED = "https://www.google.com/maps?q=Kapelstraat+113-115,+Hoboken,+Antwerpen&output=embed";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -365,6 +365,11 @@ const SCHEDULE = [
   { day: "Zaterdag", time: "16:00–17:00" },
 ];
 
+const KIDS_SCHEDULE = [
+  { day: "Woensdag", time: "17:00–18:00" },
+  { day: "Zaterdag", time: "12:00–13:00" },
+];
+
 function ScheduleSection() {
   return (
     <section id="uurrooster" className="relative bg-background py-24 md:py-32 grain">
@@ -406,6 +411,43 @@ function ScheduleSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-20 md:mt-28">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <h3 className="text-display text-4xl md:text-6xl">
+              Kids Boxing
+              <br />
+              <span className="text-primary">Training</span>
+            </h3>
+            <p className="max-w-md text-foreground/75">
+              Groep 7–14 jaar. Leren boksen, bewegen en discipline opbouwen in een veilige, energieke sfeer.
+            </p>
+          </div>
+
+          <div className="mt-10 border-t border-border">
+            {KIDS_SCHEDULE.map((s) => (
+              <div
+                key={s.day}
+                className="group flex items-center justify-between border-b border-border py-8 md:py-10 transition-colors hover:bg-surface/50 px-2 md:px-4"
+              >
+                <div className="flex items-center gap-6 md:gap-10">
+                  <span className="hidden md:block text-[10px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+                    Round
+                  </span>
+                  <span className="text-display text-4xl md:text-6xl uppercase transition-colors group-hover:text-primary">
+                    {s.day}
+                  </span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="hidden md:block h-px w-16 bg-border transition-all group-hover:w-32 group-hover:bg-primary" />
+                  <span className="text-display text-3xl md:text-5xl text-foreground/90 group-hover:text-primary transition-colors">
+                    {s.time}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
@@ -559,7 +601,7 @@ function LocationSection() {
               </div>
               <div className="text-display text-xl leading-tight">
                 Wildcard Antwerp<br />
-                Kapelstraat 113<br />
+                Kapelstraat 113-115<br />
                 Hoboken, Antwerpen
               </div>
             </div>
@@ -589,17 +631,43 @@ function LocationSection() {
             <div className="h-px bg-border" />
 
             <div>
+              <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary mb-4">
+                Kids Boxing (7–14 jaar)
+              </div>
+              <ul className="space-y-2 font-medium">
+                <li className="flex justify-between border-b border-border/60 pb-2">
+                  <span className="uppercase tracking-wider text-sm">Wo</span>
+                  <span className="text-display">17:00–18:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="uppercase tracking-wider text-sm">Za</span>
+                  <span className="text-display">12:00–13:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="h-px bg-border" />
+
+            <div>
               <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
                 Contact
               </div>
-              <a
-                href={IG_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-              >
-                <Instagram className="h-4 w-4" /> @wildcardantwerp
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="tel:+32483273472"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                >
+                  <Phone className="h-4 w-4" /> 0483 27 34 72
+                </a>
+                <a
+                  href={IG_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                >
+                  <Instagram className="h-4 w-4" /> @wildcardantwerp
+                </a>
+              </div>
             </div>
 
             <a
@@ -642,7 +710,7 @@ function Footer() {
               Boxing<br />Strength &amp; Conditioning
             </p>
             <address className="not-italic mt-6 text-sm text-foreground/70 leading-relaxed">
-              Kapelstraat 113<br />
+              Kapelstraat 113-115<br />
               Hoboken, Antwerpen
             </address>
           </div>
