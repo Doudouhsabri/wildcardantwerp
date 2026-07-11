@@ -3,18 +3,15 @@ import { useEffect, useState } from "react";
 import { Instagram, MapPin, Menu, X, ArrowRight, Phone } from "lucide-react";
 
 import heroImg from "@/assets/hero-boxer.jpg";
-import techniqueAsset from "@/assets/technique.png.asset.json";
-import strengthAsset from "@/assets/strength.png.asset.json";
-import padworkAsset from "@/assets/padwork.png.asset.json";
+import techniqueImg from "@/assets/technique.png";
+import strengthImg from "@/assets/strength.png";
+import padworkImg from "@/assets/padwork.png";
 import motivationalImg from "@/assets/motivational.jpg";
 import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
-import gallery3Asset from "@/assets/gallery3.png.asset.json";
-const techniqueImg = techniqueAsset.url;
-const strengthImg = strengthAsset.url;
-const padworkImg = padworkAsset.url;
-const gallery3 = gallery3Asset.url;
+import gallery3 from "@/assets/gallery3.png";
 import gallery4 from "@/assets/gallery4.jpg";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
