@@ -194,7 +194,7 @@ function Hero() {
     <section id="home" className="relative min-h-screen w-full overflow-hidden grain">
       <img
         src={heroImg}
-        alt="Bokser op de heavy bag in Wildcard Antwerp"
+        alt="Bokser traint op de heavy bag bij Wildcard Antwerp – boksclub in Hoboken, Antwerpen"
         width={1920}
         height={1280}
         className="absolute inset-0 h-full w-full object-cover"
