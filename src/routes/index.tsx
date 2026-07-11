@@ -561,19 +561,19 @@ function TeamSection() {
 
         <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <div className="col-span-2 row-span-2 aspect-square md:aspect-auto md:h-full overflow-hidden grain">
-            <img src={gallery3} alt="Team van boksers" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery3} alt="Team van boksers bij Wildcard Antwerp – boksclub in Hoboken, Antwerpen" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery2} alt="Rode bokshandschoenen" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery2} alt="Rode bokshandschoenen tijdens bokstraining in Hoboken" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery4} alt="Heavy bags" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery4} alt="Heavy bags in de boksschool Wildcard Antwerp Hoboken" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={padworkImg} alt="Pad work" loading="lazy" className="h-full w-full object-cover" />
+            <img src={padworkImg} alt="Pad work tijdens bokstraining voor volwassenen bij Wildcard Antwerp" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery1} alt="Shadowboxing" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery1} alt="Shadowboxing training bij Wildcard Antwerp, boksclub Antwerpen" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
 
