@@ -224,6 +224,7 @@ function Hero() {
         </div>
 
         <h1 className="text-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem]">
+          <span className="sr-only">Wildcard Antwerp – Boksclub in Hoboken, Antwerpen. </span>
           Geen excuses.
           <br />
           <span className="text-primary">ALLEEN WERK.</span>
