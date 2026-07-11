@@ -13,8 +13,76 @@ import gallery3 from "@/assets/gallery3.png";
 import gallery4 from "@/assets/gallery4.jpg";
 
 
+const SITE_URL = "https://wildcardantwerp.lovable.app";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Wildcard Antwerp | Boksclub in Hoboken – Boksen & Bokstraining Antwerpen" },
+      {
+        name: "description",
+        content:
+          "Wildcard Antwerp is dé boksclub in Hoboken, Antwerpen. Bokstraining voor volwassenen op dinsdag, donderdag en zaterdag. Techniek, kracht en conditie in de Kapelstraat 113, Hoboken.",
+      },
+      { name: "keywords", content: "Wildcard Antwerp, boksen Hoboken, boxing Hoboken, boksclub Antwerpen, boxing Antwerp, bokstraining volwassenen Antwerpen, bokstraining volwassenen Hoboken" },
+      { property: "og:title", content: "Wildcard Antwerp | Boksclub in Hoboken, Antwerpen" },
+      {
+        property: "og:description",
+        content:
+          "Boksen, kracht en conditie in Hoboken. Bokstraining voor volwassenen op dinsdag, donderdag en zaterdag. Kapelstraat 113, Hoboken – Antwerpen.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:locale", content: "nl_BE" },
+      { property: "og:site_name", content: "Wildcard Antwerp" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Wildcard Antwerp | Boksclub in Hoboken, Antwerpen" },
+      {
+        name: "twitter:description",
+        content:
+          "Bokstraining voor volwassenen in Hoboken, Antwerpen. Techniek, kracht en conditie bij Wildcard Antwerp.",
+      },
+      { name: "geo.region", content: "BE-VAN" },
+      { name: "geo.placename", content: "Hoboken, Antwerpen" },
+      { name: "geo.position", content: "51.1767;4.3517" },
+      { name: "ICBM", content: "51.1767, 4.3517" },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SportsClub",
+          name: "Wildcard Antwerp",
+          description:
+            "Boksclub in Hoboken, Antwerpen. Bokstraining voor volwassenen en kids: techniek, kracht en conditie.",
+          url: SITE_URL,
+          telephone: "+32483273472",
+          image: `${SITE_URL}/og-image.jpg`,
+          sport: ["Boxing", "Boksen"],
+          areaServed: ["Hoboken", "Antwerpen", "Antwerp"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Kapelstraat 113-115",
+            addressLocality: "Hoboken",
+            addressRegion: "Antwerpen",
+            postalCode: "2660",
+            addressCountry: "BE",
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 51.1767, longitude: 4.3517 },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "19:30", closes: "20:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "17:00", closes: "18:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "19:30", closes: "20:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "12:00", closes: "17:00" },
+          ],
+          sameAs: ["https://www.instagram.com/wildcardantwerp/"],
+        }),
+      },
+    ],
+  }),
 });
 
 const NAV = [
