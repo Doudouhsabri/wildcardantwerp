@@ -302,7 +302,7 @@ function IntroSection() {
           <div className="ring-corner relative aspect-[4/5] w-full overflow-hidden">
             <img
               src={techniqueImg}
-              alt="Boksende hand met wraps"
+              alt="Close-up van boksende hand met handwraps tijdens bokstraining bij Wildcard Antwerp in Hoboken"
               width={1200}
               height={1500}
               loading="lazy"
