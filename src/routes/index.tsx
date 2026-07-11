@@ -404,7 +404,7 @@ function MotivationalBreak() {
     <section className="relative min-h-[70vh] w-full overflow-hidden grain">
       <img
         src={motivationalImg}
-        alt="Boksring bij nacht"
+        alt="Boksring bij nacht – Wildcard Antwerp boksclub Hoboken, Antwerpen"
         width={1920}
         height={1080}
         loading="lazy"
