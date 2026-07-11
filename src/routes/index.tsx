@@ -13,8 +13,76 @@ import gallery3 from "@/assets/gallery3.png";
 import gallery4 from "@/assets/gallery4.jpg";
 
 
+const SITE_URL = "https://wildcardantwerp.lovable.app";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Wildcard Antwerp | Boksclub in Hoboken – Boksen & Bokstraining Antwerpen" },
+      {
+        name: "description",
+        content:
+          "Wildcard Antwerp is dé boksclub in Hoboken, Antwerpen. Bokstraining voor volwassenen op dinsdag, donderdag en zaterdag. Techniek, kracht en conditie in de Kapelstraat 113, Hoboken.",
+      },
+      { name: "keywords", content: "Wildcard Antwerp, boksen Hoboken, boxing Hoboken, boksclub Antwerpen, boxing Antwerp, bokstraining volwassenen Antwerpen, bokstraining volwassenen Hoboken" },
+      { property: "og:title", content: "Wildcard Antwerp | Boksclub in Hoboken, Antwerpen" },
+      {
+        property: "og:description",
+        content:
+          "Boksen, kracht en conditie in Hoboken. Bokstraining voor volwassenen op dinsdag, donderdag en zaterdag. Kapelstraat 113, Hoboken – Antwerpen.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:locale", content: "nl_BE" },
+      { property: "og:site_name", content: "Wildcard Antwerp" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Wildcard Antwerp | Boksclub in Hoboken, Antwerpen" },
+      {
+        name: "twitter:description",
+        content:
+          "Bokstraining voor volwassenen in Hoboken, Antwerpen. Techniek, kracht en conditie bij Wildcard Antwerp.",
+      },
+      { name: "geo.region", content: "BE-VAN" },
+      { name: "geo.placename", content: "Hoboken, Antwerpen" },
+      { name: "geo.position", content: "51.1767;4.3517" },
+      { name: "ICBM", content: "51.1767, 4.3517" },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SportsClub",
+          name: "Wildcard Antwerp",
+          description:
+            "Boksclub in Hoboken, Antwerpen. Bokstraining voor volwassenen en kids: techniek, kracht en conditie.",
+          url: SITE_URL,
+          telephone: "+32483273472",
+          image: `${SITE_URL}/og-image.jpg`,
+          sport: ["Boxing", "Boksen"],
+          areaServed: ["Hoboken", "Antwerpen", "Antwerp"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Kapelstraat 113-115",
+            addressLocality: "Hoboken",
+            addressRegion: "Antwerpen",
+            postalCode: "2660",
+            addressCountry: "BE",
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 51.1767, longitude: 4.3517 },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "19:30", closes: "20:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "17:00", closes: "18:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "19:30", closes: "20:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "12:00", closes: "17:00" },
+          ],
+          sameAs: ["https://www.instagram.com/wildcardantwerp/"],
+        }),
+      },
+    ],
+  }),
 });
 
 const NAV = [
@@ -126,7 +194,7 @@ function Hero() {
     <section id="home" className="relative min-h-screen w-full overflow-hidden grain">
       <img
         src={heroImg}
-        alt="Bokser op de heavy bag in Wildcard Antwerp"
+        alt="Bokser traint op de heavy bag bij Wildcard Antwerp – boksclub in Hoboken, Antwerpen"
         width={1920}
         height={1280}
         className="absolute inset-0 h-full w-full object-cover"
@@ -156,6 +224,7 @@ function Hero() {
         </div>
 
         <h1 className="text-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem]">
+          <span className="sr-only">Wildcard Antwerp – Boksclub in Hoboken, Antwerpen. </span>
           Geen excuses.
           <br />
           <span className="text-primary">ALLEEN WERK.</span>
@@ -233,7 +302,7 @@ function IntroSection() {
           <div className="ring-corner relative aspect-[4/5] w-full overflow-hidden">
             <img
               src={techniqueImg}
-              alt="Boksende hand met wraps"
+              alt="Close-up van boksende hand met handwraps tijdens bokstraining bij Wildcard Antwerp in Hoboken"
               width={1200}
               height={1500}
               loading="lazy"
@@ -305,7 +374,7 @@ function TrainingsSection() {
               <div className="md:col-span-7 relative overflow-hidden group">
                 <img
                   src={b.img}
-                  alt={b.title}
+                  alt={`${b.title} – bokstraining voor volwassenen bij Wildcard Antwerp in Hoboken`}
                   loading="lazy"
                   className="w-full h-[380px] md:h-[520px] object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                 />
@@ -335,7 +404,7 @@ function MotivationalBreak() {
     <section className="relative min-h-[70vh] w-full overflow-hidden grain">
       <img
         src={motivationalImg}
-        alt="Boksring bij nacht"
+        alt="Boksring bij nacht – Wildcard Antwerp boksclub Hoboken, Antwerpen"
         width={1920}
         height={1080}
         loading="lazy"
@@ -492,19 +561,19 @@ function TeamSection() {
 
         <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <div className="col-span-2 row-span-2 aspect-square md:aspect-auto md:h-full overflow-hidden grain">
-            <img src={gallery3} alt="Team van boksers" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery3} alt="Team van boksers bij Wildcard Antwerp – boksclub in Hoboken, Antwerpen" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery2} alt="Rode bokshandschoenen" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery2} alt="Rode bokshandschoenen tijdens bokstraining in Hoboken" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery4} alt="Heavy bags" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery4} alt="Heavy bags in de boksschool Wildcard Antwerp Hoboken" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={padworkImg} alt="Pad work" loading="lazy" className="h-full w-full object-cover" />
+            <img src={padworkImg} alt="Pad work tijdens bokstraining voor volwassenen bij Wildcard Antwerp" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery1} alt="Shadowboxing" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery1} alt="Shadowboxing training bij Wildcard Antwerp, boksclub Antwerpen" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
 
