@@ -374,7 +374,7 @@ function TrainingsSection() {
               <div className="md:col-span-7 relative overflow-hidden group">
                 <img
                   src={b.img}
-                  alt={b.title}
+                  alt={`${b.title} – bokstraining voor volwassenen bij Wildcard Antwerp in Hoboken`}
                   loading="lazy"
                   className="w-full h-[380px] md:h-[520px] object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                 />
