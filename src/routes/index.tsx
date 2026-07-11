@@ -158,7 +158,7 @@ function Hero() {
         <h1 className="text-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem]">
           Geen excuses.
           <br />
-          <span className="text-primary">ALLEEN WERKEN.</span>
+          <span className="text-primary">ALLEEN WERK.</span>
         </h1>
 
         <p className="mt-8 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed">
