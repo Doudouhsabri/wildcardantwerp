@@ -564,7 +564,7 @@ function TeamSection() {
             <img src={gallery3} alt="Team van boksers bij Wildcard Antwerp – boksclub in Hoboken, Antwerpen" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={gallery2} alt="Rode bokshandschoenen tijdens bokstraining in Hoboken" loading="lazy" className="h-full w-full object-cover" />
+            <img src={gallery2} alt="Zwarte bokshandschoenen tijdens bokstraining in Hoboken" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
             <img src={gallery4} alt="Heavy bags in de boksschool Wildcard Antwerp Hoboken" loading="lazy" className="h-full w-full object-cover" />
